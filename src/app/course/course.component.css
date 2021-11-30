@@ -1,0 +1,19 @@
+p{
+  border: 2px solid blue;
+  display: inline-block;
+  height: 30px;
+  border-collapse: collapse;
+  margin: auto;
+}
+td,th{
+  padding: 10px;
+  text-align: center;
+  border:2px solid black
+}
+table{
+  border:2px solid black;
+  margin-top:20px;
+  background-color: lightblue;
+  color:white;
+}
+

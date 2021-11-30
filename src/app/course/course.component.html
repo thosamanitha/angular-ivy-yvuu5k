@@ -1,0 +1,40 @@
+<p>
+course works!
+</p>
+<h1>Course Component</h1>
+<div *ngFor="let course of courseList">
+    <p>{{course.code}}</p>
+    <p>{{course.name}}</p>
+    <p>{{course.desc}}</p>
+    <p *ngIf="displayPrice">{{course.price}}</p>
+</div>
+
+
+<div *ngIf="courseList.length > 0; then listCourses else errCourses"></div>
+    <ng-template #listCourses>
+        <table>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let course of courseList">
+            <td>{{course.code}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.desc}}</td>
+            <td>{{course.price}}</td>
+        </tr>
+        </table>
+    </ng-template>
+    <ng-template #errCourses>
+      No array data found
+    </ng-template>
+
+
+<ul *ngFor="let course of courseList">
+    <li>{{course.code}}</li>
+    <li>{{course.name}}</li>
+    <li>{{course.desc}}</li>
+    <li>{{course.price}}</li>
+</ul>

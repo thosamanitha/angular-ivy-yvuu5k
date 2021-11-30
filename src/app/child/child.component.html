@@ -1,0 +1,11 @@
+<p>
+child works!
+</p>
+<h1>Todo Form</h1>
+<form #todoForm="ngForm" (ngSubmit)="addTodo()">
+    Id : <input type="number" name="id" [(ngModel)]="todo.id"><br>
+    Task : <input type="text" name="task" [(ngModel)]="todo.task"><br>
+    Status : <input type="text" name="status" [(ngModel)]="todo.status"><br>
+    <button type="submit">Add Todo</button>    
+   
+</form>

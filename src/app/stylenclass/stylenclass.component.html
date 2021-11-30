@@ -1,0 +1,35 @@
+<p>
+stylenclass works!
+</p>
+<h1>ngStyle and ngClass Demo</h1>
+<h1 style="color: red;">Course : {{course}}</h1>
+<hr>
+<h1 [ngStyle]="{'color':'red','font-size.px':24}">{{course}}</h1>
+<hr>
+<div *ngFor="let person of people">
+    <p [ngStyle]="{'color':getColor(person.country)}">{{person.name}}-{{person.country}}</p>
+</div>
+
+<hr>
+<p>CSS class</p>
+<div class="mycls">
+    <h1>Product</h1>
+    <h2>Price</h2>
+</div>
+<hr>
+<h1>ngClass</h1>
+<div [ngClass]="{'mycls':true}">
+    <h1>Product Name</h1>
+    <h2>Price</h2>
+</div>
+<hr>
+
+<h4>NgClass</h4>
+<ul *ngFor="let person of people">
+  <li [ngClass]="{
+    'text-success':person.country === 'UK',
+    'text-primary':person.country === 'USA',
+    'text-danger':person.country === 'HK'
+  }">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>

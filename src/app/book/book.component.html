@@ -1,0 +1,33 @@
+<p>
+book works!
+</p>
+
+<div>
+<form #bookForm ="ngForm" (ngSubmit)="addBook()">
+    Name : <input type="text" name="name" id="name" [(ngModel)]="book.name"><br>
+    Author : <input type="text" name="author" id="author" [(ngModel)]="book.author"><br>
+    ISBN : <input type="text" name="isbn" id="isbn"  [(ngModel)]="book.isbn"><br>
+    Price : <input type="number" name="price" id="price"  [(ngModel)]="book.price"><br>
+    Quantity : <input type="number" name="quantity" id="quantity" [(ngModel)]="book.quantity"><br>
+    <button type="submit">Submit</button>
+</form>
+<!--<h1>Book Name : {{book.name}}</h1>-->
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr *ngFor="let book of bookList">
+            <td>{{book.name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.quantity}}</td>
+        </tr>
+    </table>
+</div>

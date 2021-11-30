@@ -1,0 +1,26 @@
+<p>
+corona works!
+</p>
+
+<table>
+  <tr>
+    <th>state</th>
+    <th>Total</th>
+    <th>Active</th>
+    <th>Recovered</th>
+    <th>Deaths</th>
+  </tr>
+  <tr 
+     *ngFor="let case of coronacases"
+     [ngClass]="{
+       'text-danger': case.deaths === max(),
+       'text-success' : case.deaths === min()
+     }"
+  >
+    <td>{{case.state}}</td>
+    <td>{{case.state}}</td>
+    <td>{{case.state}}</td>
+    <td>{{case.state}}</td>
+    <td>{{case.state}}</td>
+  </tr>
+</table>
